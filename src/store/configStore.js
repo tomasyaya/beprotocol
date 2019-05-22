@@ -1,12 +1,10 @@
 import { createStore, combineReducers,  applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import todosReducer from '../reducers/todoReducer';
-import errorReducer from '../reducers/errorReducer';
+import dataReducer from '../reducers/dataReducer';
 
 
 const rootReducer = combineReducers({
-  todos: todosReducer,
-  error: errorReducer
+  data: dataReducer
 })
 
 const configureStore = () => {

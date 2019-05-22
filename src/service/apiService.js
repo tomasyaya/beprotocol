@@ -9,10 +9,13 @@ class ApiService {
 
   getUsers = async () => {
     try {
-      const { data } = this.api.get('/users/1');
+      const { data } = await this.api.get('/users');
       return data
     } catch(err) {
       console.log(err)
     }
   }
 }
+
+const apiService = new ApiService()
+export default apiService
