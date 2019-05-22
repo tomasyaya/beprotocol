@@ -7,7 +7,7 @@ class ApiService {
     })
   }
 
-  getUsers = async () => {
+  getTutors = async () => {
     try {
       const { data } = await this.api.get('/users');
       return data

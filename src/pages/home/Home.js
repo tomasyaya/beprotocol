@@ -1,21 +1,28 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { getUsers } from '../../actions/actions';
+import { getTutors } from '../../actions/actions';
 import TutorsDisplay from '../../components/tutorsDisplay/TutorsDisplay';
+import SortButton from '../../components/buttons/SortButton';
+import SearchBar from '../../components/searchBar/SearchBar';
 
 const Home = props => {
 
-  const { getUsers } = props;
+  const { getTutors } = props;
 
   useEffect(() => {
     ( async () => {
-      await getUsers()
+      await getTutors()
     })()
-  }, [getUsers])
+  }, [getTutors])
 
   return(
+    <>
+    <SortButton status={ false } text="city" />
+    <SortButton status={ true } text="name" />
+    <SearchBar />
     <TutorsDisplay />
+    </>
   )
 }
 
-export default connect(null, { getUsers })(Home)
+export default connect(null, { getTutors })(Home)
