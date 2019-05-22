@@ -1,11 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { searchTutor } from '../../actions/actions';
+import './input.css';
 
 const SearchBar = props => {
   const { searchTutor } =  props;
   return(
-    <input type="text" placeholder="name" onChange={(e) => searchTutor(e.target.value)}/>
+    <input className="search-input" type="text" placeholder="name" onChange={(e) => searchTutor(e.target.value)}/>
   )
 }
 

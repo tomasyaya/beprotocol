@@ -12,7 +12,7 @@ const TutorsDisplay = props => {
  
   return(
     <div className="tutors-display-container">
-      {showTutors}
+      { showTutors }
     </div>
   )
 }

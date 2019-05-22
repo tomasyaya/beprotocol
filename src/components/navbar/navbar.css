@@ -1,0 +1,23 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #E3E3E3;
+}
+
+.navbar p {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.navbar a {
+  text-decoration-line: none;
+  color: black;
+  margin: 0 10px;
+}
+
+.signin-link {
+  border: 1px solid black;
+  padding: 5px 15px;
+  border-radius: 5px;
+}

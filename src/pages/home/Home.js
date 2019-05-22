@@ -2,8 +2,9 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getTutors } from '../../actions/actions';
 import TutorsDisplay from '../../components/tutorsDisplay/TutorsDisplay';
-import SortButton from '../../components/buttons/SortButton';
-import SearchBar from '../../components/searchBar/SearchBar';
+import Navbar from '../../components/navbar/NavBar';
+import Header from '../../components/header/Header';
+import Options from '../../components/options/Options';
 
 const Home = props => {
 
@@ -17,10 +18,10 @@ const Home = props => {
 
   return(
     <>
-    <SortButton status={ false } text="city" />
-    <SortButton status={ true } text="name" />
-    <SearchBar />
-    <TutorsDisplay />
+      <Navbar />
+      <Header />
+      <Options />
+      <TutorsDisplay />
     </>
   )
 }
