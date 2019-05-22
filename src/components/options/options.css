@@ -35,3 +35,12 @@
   background: #E3E3E3;
   padding: 10px 15px;
 }
+
+@media (max-width: 420px) {
+  .options-functions {
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+    width: 100%;
+  }
+}
